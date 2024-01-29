@@ -11,7 +11,7 @@ This repository shows a basic barebones example, with just two services or conta
 
 And that's it!
 
-So to this yourself on DigitalOcean, create a new cheapo Droplet ([use this link to create a DigitalOcean account and get $200 for free, if you want](https://m.do.co/c/cec0de11762e)), and follow these guides to get it set up:
+So to do this yourself on DigitalOcean, create a new cheapo Droplet ([use this link to create a DigitalOcean account and get $200 for free, if you want](https://m.do.co/c/cec0de11762e)), and follow these guides to get it set up:
 
 - [Initial server setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-22-04) for setting up SSH, correct user groups, firewall, etc.
 - [Installing Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04) for installing, um, Docker
