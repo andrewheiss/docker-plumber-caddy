@@ -3,6 +3,8 @@
 > [!NOTE]
 > See my [DIY API with Make and {plumber} guide for more details](https://www.andrewheiss.com/blog/2024/01/12/diy-api-plumber-quarto-ojs/_book/deploying.html)
 
+---
+
 This is an updated version of [this older repository](https://github.com/andrewheiss/docker-plumber-nginx-letsencrypt) that shows how to get plumber to work with nginx and Let's Encrypt. That works fine, but it takes a lot of configuration and a whole separate process for getting and renewing HTTPS certificates. The newer (and magical) Caddy webserver handles HTTPS automatically and it only involved very minimal configuration, so I recommend using it instead of nginx. 
 
 Caddy makes everything like a billion times easier.
