@@ -1,0 +1,16 @@
+# This will be accessible at https://api.localhost and will only run on your 
+# local network for now. If you want this to be accessible on the broader 
+# internet, you'll need to use a DNS service to point the domain name to this 
+# server. Then you can change this URL to api.yoursite.com or whatever
+#
+# The server name in the reverse proxy line just has to match whatver you called 
+# the plumber service in the Docker Compose file. Here it's "plumber", but it 
+# could be whatever
+api.localhost {
+	reverse_proxy plumber:8000
+}
+
+# If you want, you can also serve that www folder, but you don't have to
+something.localhost {
+	root * /var/www/html
+}

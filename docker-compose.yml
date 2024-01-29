@@ -1,0 +1,34 @@
+version: "3.8"
+
+services: 
+    # The API container
+    plumber:
+        # This tells Docker to build from a Dockerfile in the plumber-thing folder
+        build: 
+            context: ./plumber-thing
+            dockerfile: Dockerfile
+        # Make sure this container keeps going
+        restart: unless-stopped
+
+    # The caddy webserver container. This automatically handles HTTPS(!!!)
+    caddy: 
+        # Get this image from Docker Hub
+        image: caddy:2-alpine
+        # Make sure this container keeps going
+        restart: unless-stopped
+        # Open up ports 80 (http) and 443 (https)
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            # Make stuff in ./www be accessible to the web server
+            - ./www:/var/www/html
+            
+            # Server config file
+            - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+
+            # Caddy needs to mount /data and /config for persisted data
+            - "./caddy/data/:/data/"
+            - "./caddy/config/:/config/"
+
+
